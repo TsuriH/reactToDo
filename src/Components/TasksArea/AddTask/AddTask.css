@@ -1,0 +1,135 @@
+.AddTask {
+
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2);
+    height: 510px;
+    width: 700px;
+    left: calc(50% - 350px);
+    top: calc(50% - 300px);
+    border-radius: 1.5em;
+    padding: 2.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+
+}
+
+.tag-input {
+    display: none;
+}
+
+.AddTask .add-cancel-btn-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.AddTask .cancel-task-btn {
+    background: none;
+    border: none;
+    color: #69665C;
+    font-family: "adobeClean";
+    font-size: 1em;
+}
+
+.AddTask .add-task-btn {
+    background: #69665C;
+    color: white;
+    padding: 0.8em 3.8em;
+    border-radius: 0.5em;
+    border: none;
+
+}
+
+.AddTask h2 {
+    margin-bottom: 0.3em;
+}
+
+/* .AddTask .task-content-input {
+    border: 2px solid red;
+} */
+
+.AddTask .title-task-field {
+    border: none;
+    border-radius: 0.5em;
+    background-color: #f5f7f7;
+    padding-left: 1em;
+    width: 100%;
+    height: 3em;
+
+}
+
+
+.AddTask .task-description-field {
+    border: none;
+    border-radius: 0.5em;
+    background-color: #f5f7f7;
+    padding-left: 1em;
+    width: 100%;
+    height: 9em;
+    padding-top: 10px;
+
+}
+
+.AddTask .title-task-field::placeholder {
+    font-family: "adobeClean";
+}
+
+.AddTask .task-description-field::placeholder {
+    font-family: "adobeClean";
+}
+
+.AddTask .work-tag-container {
+    display: flex;
+    gap: 0.5em;
+}
+
+.AddTask .circle-tag {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.AddTask .work-container, .study-container, .entertainment-container, .family-container{
+    margin-right: 1em;
+}
+
+.AddTask .work-container label,
+.study-container label,
+.entertainment-container label,
+.family-container label {
+    display: flex;
+    align-items: center;
+    
+    gap: 0.3em;
+    padding: 0.5em 0.9em;
+}
+
+.work-tag-container {
+    margin-left: -0.9em;
+}
+
+.AddTask .work-circle-tag {
+    background-color: #D2CEFF;
+}
+
+.AddTask .study-circle-tag {
+    background-color: #D1E5F7;
+}
+
+.AddTask .entertainment-circle-tag {
+    background-color: #FFCECE;
+}
+
+.AddTask .family-circle-tag {
+    background-color: #DAF2D6;
+}
+
+.work-container:hover,
+.study-container:hover,
+.entertainment-container:hover,
+.family-container:hover {
+    background-color: #f5f7f7;
+    border-radius: 0.8em;
+}

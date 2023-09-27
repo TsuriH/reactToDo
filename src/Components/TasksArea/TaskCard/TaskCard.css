@@ -1,0 +1,116 @@
+.TaskCard {
+    /* border: 2px solid red; */
+    background: #FFF9DE;
+    border-radius: 0.5em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.TaskCard .task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    
+
+}
+
+.TaskCard .task-header button {
+    border: none;
+    background: none;
+
+}
+
+.TaskCard .task-content {
+    width: 90%;
+    line-height: 1.5em;
+}
+
+.TaskCard .task-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.TaskCard .task-tags-container {
+    display: flex;
+    gap: 0.5em;
+}
+
+.TaskCard .tag-shape {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.TaskCard .task-footer .done-indicator {
+    display: flex;
+    gap: 0.3em;
+}
+
+.TaskCard .image-buttons-task {
+    width: 20px;
+    background: none;
+    border: none;
+
+}
+
+.TaskCard .task-card-actions-menu {
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    width: 150px;
+    height: 100px;
+    right: 20px;
+    top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    
+
+}
+
+.TaskCard .task-card-actions-menu button {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    padding-left:1em
+}
+
+.TaskCard .task-card-actions-menu button:hover {
+ background:rgb(248, 246, 246)
+}
+
+.TaskCard .task-card-actions-menu .edit-btn {
+    border-bottom: 1px solid rgb(247, 236, 236);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.TaskCard .task-card-actions-menu .delete-btn {
+  
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+
+
+.entertainment {
+    background-color: #F7C8C8;
+}
+
+.family {
+    background-color: #D3EACF;
+}
+
+.work {
+    background-color: #CBC8F7;
+}
+
+.study {
+    background-color: #CADEEF;
+}

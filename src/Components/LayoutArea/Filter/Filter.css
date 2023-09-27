@@ -1,0 +1,28 @@
+.Filter .filter-btn {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    gap: 0.5em;
+    border: none;
+    background:none;
+    padding:  1em 0em;
+    
+
+}
+
+.Filter .filter-btn:hover {
+    background: rgb(251, 244, 244);
+}
+
+.Filter .task-color {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+}
+
+.Filter .task-name-filter {
+    font-family: adobeClean;
+    color: #69665C;
+    font-size: 1.2em;
+}

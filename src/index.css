@@ -1,0 +1,22 @@
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: 'adobeClean'; 
+    src: url('../src/Fonts/AdobeCleanRegular.otf') format('woff2'); 
+  }
+
+body, #root  {
+    /* padding: 3em; */
+    height: 100vh;
+    color:#69665C;
+    font-family:'adobeClean';
+    
+  
+}
+

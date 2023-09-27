@@ -1,0 +1,13 @@
+.Header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.Header .plus-btn {
+    background: none;
+    border: none;
+    font-size: 2em;
+    
+}

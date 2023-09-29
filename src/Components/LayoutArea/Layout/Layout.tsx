@@ -46,10 +46,9 @@ function Layout(): JSX.Element {
 
         const taskToEdit = currentArrayState[currentArrayState.findIndex(task => task.id === taskId)]
         
-        setTaskToEdit(taskToEdit)
-        
         populateTasksArray(taskToEdit)
-
+        
+        setTaskToEdit(taskToEdit)
 
 
     }
@@ -104,15 +103,11 @@ function Layout(): JSX.Element {
         }
 
         if (isItEditMode) {
-            console.log("im in the edit mode");
-            console.log(taskArray);
-            
-            
+              
             newTask.id = task.id
-            console.log("the new task ID is:"  + newTask.id)
-
             const updatedTasksArray = [...taskArray]
             const taskToEditIndex = updatedTasksArray.findIndex(task => task.id === newTask.id)
+            console.log(taskToEditIndex)
             updatedTasksArray[taskToEditIndex] = newTask
             console.log(updatedTasksArray);
             

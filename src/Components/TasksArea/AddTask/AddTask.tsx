@@ -63,7 +63,7 @@ function AddTask(props: InfoFromAddTask): JSX.Element {
     }
 
 
-
+console.log(props.isItEditMode)
 
 
 
@@ -74,7 +74,7 @@ function AddTask(props: InfoFromAddTask): JSX.Element {
             <div className="add-cancel-btn-container">
 
                 <button className="cancel-task-btn" onClick={() => props.orderCloseAddTask()}>Cancel</button>
-                <button className="add-task-btn" onClick={() => taskAllTheFormDetails()}>{props.isItEditMode ? "Add" : "Update"}</button>
+                <button className="add-task-btn" onClick={() => taskAllTheFormDetails()}>{props.isItEditMode ? "Update" : "Add"}</button>
             </div>
 
             <div className="insert-title-wrapper">

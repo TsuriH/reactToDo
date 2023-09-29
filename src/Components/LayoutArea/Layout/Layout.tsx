@@ -93,28 +93,34 @@ function Layout(): JSX.Element {
     }
 
     //Add new task
+
+    
     function populateTasksArray(task: TaskType) {
         
+        console.log("this is the first row: " + task.id)
         const newTask = {
             id: taskId,
             name: task.name,
             description: task.description,
             tags: task.tags
         }
+        
 
         if (isItEditMode) {
               
             newTask.id = task.id
             const updatedTasksArray = [...taskArray]
             const taskToEditIndex = updatedTasksArray.findIndex(task => task.id === newTask.id)
-            console.log(taskToEditIndex)
+            console.log(`the task to edit is:${taskToEditIndex}` )
             updatedTasksArray[taskToEditIndex] = newTask
             console.log(updatedTasksArray);
             
             setTaskArray(updatedTasksArray)
             setIsItEditMode( () => false)
             // setTaskToEdit(undefined)
+            console.log("Inside the edit task function: " + newTask.id)
         }
+
 
         else {
             setTaskArray((prevTasks) => {

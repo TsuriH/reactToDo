@@ -31,6 +31,7 @@ function Layout(): JSX.Element {
 
     const [taskToEdit, setTaskToEdit] = useState<TaskType>()
 
+    
     function closeTaskActionsMenu() {
         setTaskMenuOpenedId(undefined)
     }
@@ -46,7 +47,7 @@ function Layout(): JSX.Element {
 
         const taskToEdit = currentArrayState[currentArrayState.findIndex(task => task.id === taskId)]
         
-        populateTasksArray(taskToEdit)
+        // populateTasksArray(taskToEdit)
         
         setTaskToEdit(taskToEdit)
 
@@ -96,46 +97,45 @@ function Layout(): JSX.Element {
 
     
     function populateTasksArray(task: TaskType) {
-        
-        console.log("this is the first row: " + task.id)
+       
         const newTask = {
             id: taskId,
             name: task.name,
             description: task.description,
             tags: task.tags
         }
-        
+
+       
 
         if (isItEditMode) {
-              
-            newTask.id = task.id
-            const updatedTasksArray = [...taskArray]
-            const taskToEditIndex = updatedTasksArray.findIndex(task => task.id === newTask.id)
-            console.log(`the task to edit is:${taskToEditIndex}` )
-            updatedTasksArray[taskToEditIndex] = newTask
-            console.log(updatedTasksArray);
+           
+            newTask.id = taskToEdit.id
             
-            setTaskArray(updatedTasksArray)
+            const taskToEditIndex = taskArray.findIndex(task => task.id === newTask.id)
+
+            taskArray[taskToEditIndex] = newTask
+            
+            setTaskArray(taskArray => taskArray)
+
             setIsItEditMode( () => false)
-            // setTaskToEdit(undefined)
-            console.log("Inside the edit task function: " + newTask.id)
+            
+
         }
 
 
         else {
+            
             setTaskArray((prevTasks) => {
                 return [...prevTasks, newTask]
                 
             })
+
             setTaskId((prevId) => prevId + 1)
         }
         
-       
-
         // updateTasksLs(newTask)
         updateTasksLs()
         setIsAddTaskVisible(!isAddTaskVisible)
-
 
     }
 
